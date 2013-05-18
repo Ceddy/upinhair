@@ -78,6 +78,11 @@ html,body {
   float: left;
   margin-top: 27px;
   width: 240px;
+
+  .text-field {
+    border-radius: 0;
+    padding: 20px;
+  }
 }
 
 #home-info {

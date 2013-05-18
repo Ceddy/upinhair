@@ -1,3 +1,14 @@
-body {
+html,body { 
   font-family: 'proxima-nova', Arial, Helvetica, sans-serif;
+  height: 100%; 
+  margin: 0px; 
+  padding: 0px; 
 }
+
+#home_index {
+  background: #000 image-url('salon_1.png') no-repeat center;
+  height: 100%; 
+  margin: 0px; 
+  padding: 0px;
+}
+

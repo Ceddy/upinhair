@@ -1,5 +1,4 @@
 /* Color Variables */
-
 .clearfix:after {
   content: ".";
   display: block;
@@ -42,7 +41,7 @@ html,body {
 #home-control {
   color: #fff;
   margin-left: -300px;
-  position: absolute; top: 30%; left: 50%;
+  position: absolute; top: 30%; left: 54%;
   width: 640px;
 }
 
@@ -79,9 +78,13 @@ html,body {
   margin-top: 27px;
   width: 240px;
 
+  #home-pass {
+    margin: 0;
+    width: 115px;
+  }
+
   .text-field {
-    border-radius: 0;
-    padding: 20px;
+    font-family: 'proxima-nova', Arial, Helvetica, sans-serif;
   }
 }
 

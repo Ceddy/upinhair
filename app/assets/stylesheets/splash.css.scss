@@ -1,3 +1,5 @@
+/* Color Variables */
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -41,7 +43,7 @@ html,body {
   color: #fff;
   margin-left: -300px;
   position: absolute; top: 30%; left: 50%;
-  width: 600px;
+  width: 640px;
 }
 
 #home-logo {
@@ -54,7 +56,7 @@ html,body {
 
 #home-login {
   float: left;
-  width: 300px;
+  width: 240px;
   
   #home-stylist {
     background: image-url('stylist.png') no-repeat center;
@@ -67,14 +69,22 @@ html,body {
     background: image-url('customer.png') no-repeat center;
     height: 100px;
     float: left;
+    margin-left: 20px;
     width: 100px;
   }  
 }
 
-#home-info {
+#home-inputs {
   float: left;
+  margin-top: 27px;
+  width: 240px;
+}
+
+#home-info {
+  float: right;
   font-family: 'galaxiepolaris', Helvetica, sans-serif;
-  width: 300px;
+  margin-right: 70px;
+  width: 310px;
 }
 
 #home-catch {

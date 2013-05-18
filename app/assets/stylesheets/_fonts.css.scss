@@ -1,0 +1,153 @@
+// pacifico
+@font-face {
+  font-family: 'pacifico';
+  src: asset-url('/fonts/pacifico/Pacifico-webfont.woff', 'public') format('woff');
+}
+
+// contains both galaxie polaris and proxima nova fonts
+@font-face {
+  font-family: 'proxima-nova';
+  src: asset-url('/fonts/proxima/ProximaNova-LightWeb.woff', 'public') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: asset-url('/fonts/proxima/ProximaNova-LightItWeb.woff', 'public') format('woff');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: asset-url('/fonts/proxima/ProximaNova-RegWeb.woff', 'public') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: asset-url('/fonts/proxima/ProximaNova-RegItWeb.woff', 'public') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: asset-url('/fonts/proxima/ProximaNova-SboldItWeb.woff', 'public') format('woff');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: asset-url('/fonts/proxima/ProximaNova-SboldWeb.woff', 'public') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: asset-url('/fonts/proxima/ProximaNova-BoldWeb.woff', 'public') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: asset-url('/fonts/proxima/ProximaNova-BoldItWeb.woff', 'public') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'galaxiepolaris';
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-light.eot', 'public');
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-light.eot?#iefix', 'public') format("embedded-opentype"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-light.svg', 'public') format("svg"),
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-light.woff', 'public') format("woff"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-light.ttf', 'public') format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'galaxiepolaris';
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-light.eot', 'public');
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-light.eot?#iefix', 'public') format("embedded-opentype"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-light.svg', 'public') format("svg"),
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-light.woff', 'public') format("woff"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-light.ttf', 'public') format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'galaxiepolaris';
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-medium.eot', 'public');
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-medium.eot?#iefix', 'public') format("embedded-opentype"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-medium.svg', 'public') format("svg"),
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-medium.woff', 'public') format("woff"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-medium.ttf', 'public') format("truetype");
+
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'galaxiepolaris';
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-mediumitalic.eot', 'public');
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-mediumitalic.eot?#iefix', 'public') format("embedded-opentype"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-mediumitalic.svg', 'public') format("svg"),
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-mediumitalic.woff', 'public') format("woff"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-mediumitalic.ttf', 'public') format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'galaxiepolaris';
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-book.eot', 'public');
+  src:  asset-url('/fonts/galaxiepolaris/galaxiepolaris-book.eot?#iefix', 'public') format("embedded-opentype"),
+        asset-url('/fonts/galaxiepolaris/galaxiepolaris-book.svg', 'public') format("svg"),
+        asset-url('/fonts/galaxiepolaris/galaxiepolaris-book.woff', 'public') format("woff"), 
+        asset-url('/fonts/galaxiepolaris/galaxiepolaris-book.ttf', 'public') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'galaxiepolaris';
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-bookitalic.eot', 'public');
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-bookitalic.eot?#iefix', 'public') format("embedded-opentype"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-bookitalic.svg', 'public') format("svg"),
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-bookitalic.woff', 'public') format("woff"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-bookitalic.ttf', 'public') format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'galaxiepolaris';
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-bold.eot', 'public');
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-bold.eot?#iefix', 'public') format("embedded-opentype"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-bold.svg', 'public') format("svg"),
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-bold.woff', 'public') format("woff"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-bold.ttf', 'public') format("truetype");
+
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'galaxiepolaris';
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-bolditalic.eot', 'public');
+  src: asset-url('/fonts/galaxiepolaris/galaxiepolaris-bolditalic.eot?#iefix', 'public') format("embedded-opentype"),
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-bolditalic.svg', 'public') format("svg"),
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-bolditalic.woff', 'public') format("woff"), 
+  asset-url('/fonts/galaxiepolaris/galaxiepolaris-bolditalic.ttf', 'public') format("truetype");
+
+  font-weight: bold;
+  font-style: italic;
+}

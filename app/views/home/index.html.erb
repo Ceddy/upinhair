@@ -1,35 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Up</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <!-- Bootstrap -->
-  </head>
-  <body id='home-index'>
-    <div class='container'>
-      <div id='home-overlay'>
-      </div>
-      
-      <div id='home-control' class='row'>
-        <div id='home-logo'>upinhair</div>
+<h3>Home</h3>
+<% @users.each do |user| %>
+  <p>User: <%= user.name %> </p>
+<% end %>
 
-        <div id='home-login' class='clearfix'>
-          <div id='home-stylist'></div>
-          <div id='home-customer'></div>
-        </div>
-  
-        <div id='home-info'>
-          <div id='home-catch'>Perfect Haircuts.</div>  
-          <div id='home-intro'>Upinhair connects you with the best stylists for your hair.</div>
-        </div>
-
-        <div id='home-inputs'>
-          <input id='home-email' type='text' class='text-field' placeholder='email'/>
-          <input id='home-pass' type='password' class='text-field' placeholder='password'/>
-          <span class='button'>login</span>
-        </div>
-
-      </div>
-    </div>
-  </body>
-</html>
+<% if user_signed_in? %>
+  <li>
+  <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>        
+  </li>
+ <% end %>

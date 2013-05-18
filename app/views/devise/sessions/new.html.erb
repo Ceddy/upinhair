@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Up</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Bootstrap -->
+  </head>
+  <body id='home-index'>
+    <div class='container'>
+      <div id='home-overlay'>
+      </div>
+      
+      <div id='home-control' class='row'>
+        <div id='home-logo'>upinhair</div>
+
+        <div id='home-login' class='clearfix'>
+          <div id='home-stylist'></div>
+          <div id='home-customer'></div>
+        </div>
+  
+        <div id='home-info'>
+          <div id='home-catch'>Perfect Haircuts.</div>  
+          <div id='home-intro'>Upinhair connects you with the best stylists for your hair.</div>
+        </div>
+
+        <div id='home-inputs'>
+        	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|%>
+			  <%= f.email_field :email, :autofocus => true, :placeholder => 'email' %>
+			  <%= f.password_field :password, :placeholder => 'password' %>
+
+			  <%= f.submit "login", :class => 'butt' %>
+			<% end %>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
+<%= render "devise/shared/links" %>
+

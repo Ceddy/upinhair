@@ -33,20 +33,21 @@ html,body {
 
 #home-logo {
   color: #fff;
-  float: left;
   font-family: 'pacifico', Arial, Helvetica, sans-serif;
   font-size: 50px;
   line-height: 50px;
-  width: 300px;
+  margin-bottom: 30px;
 }
 
 #home-info {
-  float: left;
-  width: 300px;
+  float: right;
+  font-family: 'galaxiepolaris', Helvetica, sans-serif;
+  width: 290px;
 }
 
 #home-intro {
 }
 
 #home-catch {
+  /*font-family: $headline_font;*/
 }

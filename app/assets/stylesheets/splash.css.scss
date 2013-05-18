@@ -5,10 +5,48 @@ html,body {
   padding: 0px; 
 }
 
-#home_index {
+.container {
+  height: 100%;
+}
+
+#home-index {
   background: #000 image-url('salon_1.png') no-repeat center;
   height: 100%; 
   margin: 0px; 
   padding: 0px;
 }
 
+#home-overlay {
+  background: #000;
+  float: right;
+  height: 100%;
+  opacity: 0.3;  
+  width: 50%;
+}
+
+#home-control {
+  color: #fff;
+  margin-left: -300px;
+  position: absolute; top: 40%; left: 50%;
+  width: 600px;
+}
+
+#home-logo {
+  color: #fff;
+  float: left;
+  font-family: 'pacifico', Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  width: 300px;
+}
+
+#home-info {
+  float: left;
+  width: 300px;
+}
+
+#home-intro {
+}
+
+#home-catch {
+}

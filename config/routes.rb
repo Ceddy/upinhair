@@ -1,4 +1,7 @@
 Upinhair::Application.routes.draw do
+  resources :appointments
+
+
   resources :users
 
 

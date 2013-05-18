@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     @users = User.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render layout: 'dashboard'}
       format.json { render json: @users }
     end
   end
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render layout: 'dashboard'}
       format.json { render json: @user }
     end
   end

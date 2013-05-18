@@ -38,3 +38,6 @@ gem 'paperclip'
 
 # To use debugger
 # gem 'debugger'
+
+# Auth
+gem 'devise'

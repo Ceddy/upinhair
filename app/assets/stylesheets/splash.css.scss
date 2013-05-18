@@ -1,3 +1,16 @@
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+ 
+.clearfix {
+  display: inline-block;
+}
+
 html,body { 
   font-family: 'proxima-nova', Arial, Helvetica, sans-serif;
   height: 100%; 
@@ -27,7 +40,7 @@ html,body {
 #home-control {
   color: #fff;
   margin-left: -300px;
-  position: absolute; top: 40%; left: 50%;
+  position: absolute; top: 30%; left: 50%;
   width: 600px;
 }
 
@@ -39,15 +52,39 @@ html,body {
   margin-bottom: 30px;
 }
 
-#home-info {
-  float: right;
-  font-family: 'galaxiepolaris', Helvetica, sans-serif;
-  width: 290px;
+#home-login {
+  float: left;
+  width: 300px;
+  
+  #home-stylist {
+    background: image-url('stylist.png') no-repeat center;
+    height: 100px;
+    float: left;
+    width: 100px;
+  }
+
+  #home-customer {
+    background: image-url('customer.png') no-repeat center;
+    height: 100px;
+    float: left;
+    width: 100px;
+  }  
 }
 
-#home-intro {
+#home-info {
+  float: left;
+  font-family: 'galaxiepolaris', Helvetica, sans-serif;
+  width: 300px;
 }
 
 #home-catch {
-  /*font-family: $headline_font;*/
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 600;
+}
+
+#home-intro {
+  font-size: 22px;
+  line-height: 25px;
+  margin-top: 10px;
 }

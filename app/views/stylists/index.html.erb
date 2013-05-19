@@ -9,16 +9,16 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @stylists.each do |stylist| %>
+  <% stylist_user = stylist.user %>
   <tr>
+    <!-- <td><%= image_tag stylist_user.pic.url, :id=>"profile-avatar" %></td> -->
     <td><%= stylist.salon %></td>
-    <td><%= link_to 'Show', stylist %></td>
-    <td><%= link_to 'Book It', {:controller=>"appointments", :action=>"new", :stylist => stylist.id} %>
+    <td><%= link_to 'Show', stylist, :class=>'actions' %></td>
+    <td><%= link_to 'Book It', {:controller=>"appointments", :action=>"new", :stylist => stylist.id}, :class=>'actions' %>
   </tr>
 <% end %>
 </table>
-
-<br />
-

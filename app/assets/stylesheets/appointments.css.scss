@@ -4,27 +4,58 @@
 
 .appointment-widget {
 	margin: 30px;
-	border: 1px solid seagreen;
+	min-width: 750px;
+
+	&.confirmed {
+		border: 1px solid #40A99E;
+	}
+
+	&.pending {
+		border: 1px solid #F4A152;
+	}
+
+	&.rejected {
+		border: 1px solid #F15D46;	
+	}
 }
 
 .appointment-header {
-	background: seagreen;
+	background: #40A99E;
 	position: relative;
 	color: white;
 	padding: 10px;
+	
 	h1 {
 		font-family: "proxima-nova";
+		font-size: 30px;
+		font-weight: 300;
+		margin-left: 10px;
 	}
+	
 	h2 {
-		position: absolute;
 		color: white;
-		right: 20px;
-		top: 0;
+		font-size: 20px;
+		font-weight: 300;
+		margin-right: 10px;
+		position: absolute; right: 20px; top: 0;
+	}
+
+	&.confirmed {
+		background: #40A99E;
+	}
+
+	&.pending {
+		background: #F4A152;
+	}
+
+	&.rejected {
+		background: #F15D46;	
 	}
 }
 
 .appointment-button {
 	float:right;
+	
 	.button {
 		height: 50px;
 	}
@@ -39,18 +70,32 @@
 }
 
 .appointment-page-stylist {
-	height: 150px;
+	height: 120px;
+	
 	#avatar {
 		width: 100px;
 		margin-bottom: 20px;
 	}
+	
+	#appointment-image img {
+		width: 120px;
+		height: 120px;
+		float: left;
+	}
+
+	#appointment-user {
+		float: left;
+		margin-left: 30px;
+	}
+
 	h2 {
 		font-size: 30px;
 	}
+	
 	h3 {
 		font-size: 20px;
-		color: gray;
 		line-height: 1;
+		font-weight: 300;
 	}
 }
 

@@ -21,6 +21,24 @@ html,body {
   padding: 0px;
 }
 
+input.action {
+  background: #4CACCE;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  float: left;
+  padding: 10px 30px;
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    background: #495D6E;
+    text-decoration: underline;
+  }
+}
+
 .container {
   height: 100%;
 }

@@ -9,8 +9,15 @@
 
 .appointment-header {
 	background: seagreen;
+	position: relative;
 	color: white;
 	padding: 10px;
+	h2 {
+		position: absolute;
+		color: white;
+		right: 20px;
+		top: 0;
+	}
 }
 
 .appointment-form-container {
@@ -31,3 +38,4 @@
 		font-size: 30px;
 	}
 }
+

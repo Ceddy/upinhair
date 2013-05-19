@@ -3,7 +3,8 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    @appointments = Appointment.all
+    @customer = Customer.find_by_user_id(current_user.id)
+    @appointments = Appointment.where("customer_id = ?", @customer.id)
 
     respond_to do |format|
       format.html # index.html.erb

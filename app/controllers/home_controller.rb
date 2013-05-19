@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 
     # Redirect logic here!
     respond_to do |format|
-      format.html # index.html.erb
+      format.html {render layout: 'dashboard'}
     end
   end
 

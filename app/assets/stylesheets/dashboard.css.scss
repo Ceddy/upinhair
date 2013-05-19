@@ -21,6 +21,7 @@ ul {
 
       span {
         font-size: 40px;
+        padding: 20px;
         position: relative;
         top: 120px;
       }
@@ -65,5 +66,6 @@ ul {
 #content-container {
   height: 100%;
   margin-left: 300px;
+  min-height: 750px;
   overflow: hidden;
 }

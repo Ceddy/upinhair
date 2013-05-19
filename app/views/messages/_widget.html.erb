@@ -1,0 +1,10 @@
+<div class="row-fluid message-widget">
+	<div class="span1">
+		<% @user = User.find(message.sender_id) %>
+		<%= image_tag @user.pic.url %> 
+	</div>
+	<div class="span8">
+		<h1><%= @user.name == current_user.name ? "Me" : @user.name %></h1>
+		<%= message.content %>
+	</div>
+</div>

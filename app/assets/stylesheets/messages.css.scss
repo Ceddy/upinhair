@@ -1,3 +1,15 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.message-widget {
+	margin: 10px;
+	border-bottom: 1px solid black;
+	padding: 20px;
+	h1 {
+		font-size: 20px;
+	}
+	img {
+		width: 100px;
+	}
+}

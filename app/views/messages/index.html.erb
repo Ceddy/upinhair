@@ -1,7 +1,7 @@
 <h1>Consultation</h1>
 
 <% @messages.each do |message| %>
-  <%= message.content %>
+  <%= render :partial => 'widget', :locals => { :message => message } %>
 <% end %>
 
 <br />

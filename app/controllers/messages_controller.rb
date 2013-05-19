@@ -4,6 +4,8 @@ class MessagesController < ApplicationController
   # GET /messages.json
   def index
     @appointment = Appointment.find(params[:appointment_id])
+    @customer = Customer.find(@appointment.customer_id)
+    @stylist = Stylist.find(@appointment.stylist_id)
     @messages = Message.where("appointment_id = ?", @appointment.id)
 
     respond_to do |format|

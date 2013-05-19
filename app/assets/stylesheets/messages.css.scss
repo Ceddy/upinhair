@@ -3,14 +3,62 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .message-widget {
-	margin: 10px 0;
 	border-bottom: 1px solid #eee;
 	padding: 20px;
 	min-height: 100px;
+	
 	h1 {
 		font-size: 20px;
 	}
+
 	img {
-		width: 100px;
+		width: 70px;
+		height: 70px;
 	}
+}
+
+#consultation-status {
+	color: #fff;
+	padding: 25px;
+	font-size: 20px;
+	font-weight: 200;
+
+	&.confirmed {
+		background: #40A99E;
+	}
+
+	&.pending {
+		background: #F4A152;
+	}
+
+	&.rejected {
+		background: #F15D46;	
+	}
+
+	#appointment-status {
+		float: right;
+		font-size: 15px;
+		margin-top: 30px;
+	}
+
+	#appointment-avatar {
+		height: 70px;
+		margin-left: 25px;
+		width: 70px;
+	}
+
+	#consultation-name {
+		font-size: 20px;
+		font-weight: 800;
+		margin-left: 25px;
+	}
+
+	#consultation-date {
+		margin-left: 25px;
+	}
+}
+
+#consultation-appointment {
+	border-bottom: 1px solid #ccc;
+	padding: 20px;
 }

@@ -16,7 +16,7 @@
     <h1>Content</h1>
     <div class="field-section">
       <div class="field form-inline">
-        <%= f.text_area :content, :rows=>4 %>
+        <%= f.text_area :content, :rows=>4, :placeholder => "Enter a message" %>
       </div>
       <div class="field form-inline">
         <%= f.hidden_field :sender, :value => current_user.id %>

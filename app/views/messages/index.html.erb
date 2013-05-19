@@ -1,7 +1,25 @@
 <h1 class='header-title'>Consultation</h1>
 
 <div class="customer-help">
-  The consultation lets customers interact with their stylists before their appointment. Customers can post styles and receive feedback and suggestions from their stylist regarding styles that fit them.
+  Consultations let customers interact with their stylists before their in -person appointment. Customers can post styles and receive feedback or suggestions from their stylist regarding what fits them.
+</div>
+
+<!-- Add Appointment Status -->
+<% case @appointment.status %>
+<% when "Confirmed" %>
+  <% type = "confirmed" %>
+<% when "Pending" %>
+  <% type = "pending" %>
+<% when "Rejected" %>
+  <% type = "rejected" %>
+<% end %>
+
+<% @relevant_user = current_user.user_type == "Customer" ? @stylist : @customer %>
+<div id="consultation-status" class="<%= type %>">
+  <%= image_tag @relevant_user.user.pic.url, :id=>"appointment-avatar" %>
+  <span id="consultation-name"><%= @relevant_user.user.name %></span>
+  <span id="consultation-date"><%= @appointment.date %></span>
+  <span id="appointment-status"><%= @appointment.status %></span>  
 </div>
 
 <% @messages.each do |message| %>

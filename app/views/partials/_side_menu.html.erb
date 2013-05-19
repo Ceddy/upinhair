@@ -13,7 +13,7 @@
   <div id='profile-location'>
     <i class='icon-map-marker'>
       <span id='profile-city'>
-        <%= current_user.location %>
+        <%= current_user.city %>
       </span>
     </i>
   </div>
@@ -45,13 +45,13 @@
         <span><%= link_to "Appointments", appointments_path %></span>
       </i>
     </li>
+    <% if current_user.user_type == 'Customer' %>
     <li>
       <i class='icon-heart'>
-        <% if current_user.user_type == 'Customer' %>
-          <% @customer = Customer.find_by_user_id(current_user.id) %>
-          <span><%= link_to "Lookbook", customer_look_images_path(@customer) %></span>
-        <% end %>
+        <% @customer = Customer.find_by_user_id(current_user.id) %>
+        <span><%= link_to "Lookbook", customer_look_images_path(@customer) %></span>
       </i>
     </li>
+    <% end %>
   </ul>
 </div>

@@ -1,0 +1,21 @@
+<%= form_for(@look_image) do |f| %>
+  <% if @look_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@look_image.errors.count, "error") %> prohibited this look_image from being saved:</h2>
+
+      <ul>
+      <% @look_image.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Image" %>
+    <%= f.file_field :pic %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

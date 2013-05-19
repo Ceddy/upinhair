@@ -1,11 +1,18 @@
 Upinhair::Application.routes.draw do
 
 
+  resources :look_images
+
+
+  resources :looks
+
+
+  devise_for :users
+
   resources :customers
 
 
   resources :stylists
-
 
   resources :appointments
 

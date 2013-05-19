@@ -1,0 +1,62 @@
+/* side menu #252525 */
+ul {
+  list-style: none;
+}
+
+#side-menu {
+  background: #252525;
+  color: #fff;
+  float: left;
+  height: 100%;
+  width: 300px;
+
+  #profile-info {
+    height: 250px;
+    text-align: center;
+
+    #profile-picture {
+      background: url('nad.png') center no-repeat;
+      height: 300px;
+      width: 300px;
+
+      span {
+        font-size: 40px;
+        position: relative;
+        top: 150px;
+      }
+    }
+  }
+
+  #profile-location {
+    font-size: 25px;
+    padding: 10px 0 30px;
+    text-align: center;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    border-top: 1px solid #363636;
+    border-bottom: 1px solid #363636;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 20px 40px;
+
+    span {
+      margin-left: 10px;
+      font-family: 'proxima-nova';
+    }
+
+    &:hover {
+      background: #111111;
+    }
+  }
+}
+
+#content-container {
+  height: 100%;
+  margin-left: 300px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upinhair</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<!-- side menu -->
+	<div id='side-menu'>
+	  <ul>
+	    <li>
+	      <i class='icon-user'>
+	        <span>Profile</span>
+	      </i>
+	    </li>
+	    <li>
+	      <i class='icon-search'>
+	        <span>Stylists</span>
+	      </i>
+	    </li>
+	    <li>
+	      <i class='icon-calendar'>
+	        <span>Appointments</span>
+	      </i>
+	    </li>
+	    <li>
+	      <i class='icon-heart'>
+	        <span>Lookbook</span>
+	      </i>
+	    </li>
+	  </ul>
+	</div>
+
+	<!-- content -->
+	<div id='content-container'><%= yield %></div>
+</body>
+</html>

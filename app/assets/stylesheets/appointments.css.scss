@@ -1,3 +1,23 @@
 // Place all the styles related to the Appointments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.appointment-header {
+	background: seagreen;
+	color: white;
+	padding: 10px;
+}
+
+.appointment-form-container {
+	padding: 20px;
+}
+
+.appointment-page {
+	padding: 20px;
+}
+
+.appointment-page-stylist {
+	#avatar {
+		width: 50px;
+	}
+}

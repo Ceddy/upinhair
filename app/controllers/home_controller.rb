@@ -19,6 +19,12 @@ class HomeController < ApplicationController
     redirect_to path
   end
 
+  def search
+ 	respond_to do |format|
+      format.html # index.html.erb
+    end
+  end
+
   def dashboard
     respond_to do |format|
       format.html # index.html.erb

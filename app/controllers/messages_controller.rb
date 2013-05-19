@@ -3,8 +3,8 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
-    @messages = Message.all
     @appointment = Appointment.find(params[:appointment_id])
+    @messages = Message.where("appointment_id = ?", @appointment.id)
 
     respond_to do |format|
       format.html # index.html.erb

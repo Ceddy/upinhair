@@ -5,7 +5,9 @@ Upinhair::Application.routes.draw do
   resources :appointments do
     resources :messages
   end
-  resources :customers
+  resources :customers do
+    resources :look_images
+  end
   resources :looks
   resources :look_images
   resources :stylists

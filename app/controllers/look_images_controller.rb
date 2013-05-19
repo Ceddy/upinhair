@@ -1,4 +1,5 @@
 class LookImagesController < ApplicationController
+  layout 'dashboard'
   # GET /look_images
   # GET /look_images.json
   def index

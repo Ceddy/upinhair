@@ -1,4 +1,3 @@
 class Customer < ActiveRecord::Base
-  attr_accessible :face_type
-  has_one :user, :as => :rolable
+  attr_accessible :body_shape, :facial_shape, :hair_color, :hair_length, :hair_texture
 end

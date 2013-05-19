@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Facial shape:</b>
+  <%= @customer.facial_shape %>
+</p>
+
+<p>
+  <b>Body shape:</b>
+  <%= @customer.body_shape %>
+</p>
+
+<p>
+  <b>Hair length:</b>
+  <%= @customer.hair_length %>
+</p>
+
+<p>
+  <b>Hair color:</b>
+  <%= @customer.hair_color %>
+</p>
+
+<p>
+  <b>Hair texture:</b>
+  <%= @customer.hair_texture %>
+</p>
+
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

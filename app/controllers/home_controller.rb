@@ -5,7 +5,6 @@ class HomeController < ApplicationController
   	@users = User.all
 
     # Redirect logic here!
-
     respond_to do |format|
       format.html # index.html.erb
     end
@@ -20,6 +19,6 @@ class HomeController < ApplicationController
   def dashboard
     respond_to do |format|
       format.html # index.html.erb
-    end    
+    end
   end
 end

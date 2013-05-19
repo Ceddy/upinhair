@@ -21,17 +21,17 @@
   <ul>
     <li>
       <i class='icon-user'>
-        <span>Profile</span>
+        <span><%= link_to "Profile", edit_customer_path(current_user) %></span>
       </i>
     </li>
     <li>
       <i class='icon-search'>
-        <span>Stylists</span>
+        <span><%= link_to "Stylists", stylists_path %></span>
       </i>
     </li>
     <li>
       <i class='icon-calendar'>
-        <span>Appointments</span>
+        <span><%= link_to "Appointments", new_appointment_path %></span>
       </i>
     </li>
     <li>

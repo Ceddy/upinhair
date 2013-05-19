@@ -1,4 +1,5 @@
 class AppointmentsController < ApplicationController
+  layout 'dashboard'
   # GET /appointments
   # GET /appointments.json
   def index

@@ -17,6 +17,9 @@
     	</div>
     	<div class="span5">
         <h2><%= @relevantUser.name %></h2>
+        <% if current_user.user_type == "Customer" %>
+          <h3><%= @relevant.salon %></h3>
+        <% end %>
         <%= appointment.date.strftime("%Y-%m-%d %H:%M") %>
     	</div>
       <% if current_user.user_type == "Stylist" and appointment.status != "Confirmed" %>

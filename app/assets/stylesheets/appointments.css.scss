@@ -12,6 +12,9 @@
 	position: relative;
 	color: white;
 	padding: 10px;
+	h1 {
+		font-family: "proxima-nova";
+	}
 	h2 {
 		position: absolute;
 		color: white;
@@ -43,6 +46,11 @@
 	}
 	h2 {
 		font-size: 30px;
+	}
+	h3 {
+		font-size: 20px;
+		color: gray;
+		line-height: 1;
 	}
 }
 

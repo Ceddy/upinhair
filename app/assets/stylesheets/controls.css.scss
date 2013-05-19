@@ -14,3 +14,25 @@ h1 {
 h1.header-title {
   padding: 25px 30px 25px;
 }
+
+.action-container {
+  margin-top: -40px;
+  width: 400px;
+}
+
+a.actions {
+  background: #4CACCE;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  float: right;
+  padding: 10px 30px;
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    background: #495D6E;
+  }
+}

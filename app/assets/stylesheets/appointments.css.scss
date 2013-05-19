@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.appointment-widget {
+	margin: 30px;
+	border: 1px solid seagreen;
+}
+
 .appointment-header {
 	background: seagreen;
 	color: white;
@@ -17,7 +22,12 @@
 }
 
 .appointment-page-stylist {
+	height: 150px;
 	#avatar {
-		width: 50px;
+		width: 100px;
+		margin-bottom: 20px;
+	}
+	h2 {
+		font-size: 30px;
 	}
 }

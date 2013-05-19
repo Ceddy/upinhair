@@ -6,4 +6,10 @@ class HomeController < ApplicationController
       format.html # index.html.erb
     end
   end
+
+  def search
+ 	respond_to do |format|
+      format.html # index.html.erb
+    end
+  end
 end

@@ -26,6 +26,6 @@
   <%= render :partial => 'widget', :locals => { :message => message } %>
 <% end %>
 
-<div id="consultation-container">
+<div id="consultation-container" class='clearfix'>
   <%= link_to 'New Message', new_appointment_message_path(@appointment.id), :class => "actions" %>
 </div>

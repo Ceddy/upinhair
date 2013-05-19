@@ -55,6 +55,15 @@ ul {
     span {
       margin-left: 10px;
       font-family: 'proxima-nova';
+      color: #fff;
+
+      a {
+        color: #fff;        
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     &:hover {

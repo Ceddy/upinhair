@@ -49,7 +49,7 @@
     <li>
       <i class='icon-heart'>
         <% @customer = Customer.find_by_user_id(current_user.id) %>
-        <span><%= link_to "Lookbook", customer_look_images_path(@customer) %></span>
+        <span>Lookbook</span>
       </i>
     </li>
     <% end %>

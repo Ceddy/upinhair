@@ -8,10 +8,12 @@ class HomeController < ApplicationController
     case current_user.user_type
     when 'Stylist'
       # After signing in, redirect regular users to the regular dashboard
-      path = stylists_path
+      @stylist = Stylist.where('user_id = ?', current_user.id).first
+      path = edit_stylist_path(stylist.id)
     when 'Customer'
       # After signing in, redirect administrator users to the admin dashboard
-      path = customers_path
+      @customer = Customer.where('user_id = ?', current_user.id).first
+      path = edit_customer_path(customer.id)
     end
 
     redirect_to path

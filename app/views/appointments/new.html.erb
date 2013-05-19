@@ -1,19 +1,24 @@
-<div class="appointment-page">
-	<div class="appointment-header">
-		<h1>Request Appointment</h1>
-	</div>
-	<div class="appointment-form-container">
-	  <div class="row-fluid appointment-page-stylist">
- 	  	<% @stylistUser = @stylist.user %>
-    	<div class="span2">
-      	<%= image_tag @stylistUser.pic.url, :id=>"avatar" %>
-    	</div>
-    	<div class="span5">
-      	<h2><%= @stylistUser.name %></h2>
-    	</div>
-  	</div>
-		<%= render 'form' %>
-	</div>
+<h1 class='header-title'>Request Appointment</h1>
 
-	<%= link_to 'Back', appointments_path %>
+<div class="customer-help">
+  It is recommended that you book in advance to give the stylist ample time to plan ahead. This also allows a more in depth consultation process to ensure you get the perfect style.
 </div>
+
+<div class="customer-edit clearfix customer-appointment-container">
+  <div class="form-section">
+    <% @stylistUser = @stylist.user %>
+  </div>
+  
+  	<div class="customer-stylist-user">
+    	<%= image_tag @stylistUser.pic.url, :id=>"avatar" %>
+  	</div>
+
+  	<div class="customer-user-name">
+    	<h2><%= @stylistUser.name %></h2>
+      <h2 class="customer-location">Location: <%= @stylistUser.location %></h2>
+  	</div>
+	</div>
+	<%= render 'form' %>
+</div>
+
+<%= link_to 'Back', appointments_path %>

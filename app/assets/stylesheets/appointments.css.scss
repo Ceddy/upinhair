@@ -108,3 +108,48 @@
 		font-weight: 300;
 	}
 }
+
+.customer-stylist-user {
+	float: left;
+
+	img {
+		height: 120px;
+		width: 120px;		
+	}
+}
+
+.customer-user-name {
+	float: left;
+	margin-left: 30px;
+	width: 400px;
+}
+
+.customer-location {
+	font-size: 20px;
+	font-weight: 300;
+}
+
+#new_appointment {
+	.field-section {
+		margin: 30px;
+	}
+
+	h1 {
+		border-bottom: 1px solid #eee;
+	}
+
+	select {
+		width: 100px;
+	}
+
+	select:nth-child(4),
+	select:nth-child(5),
+	select:nth-child(6)
+	 {
+		width: 50px;
+	}
+}
+
+.customer-edit.customer-appointment-container {
+	width: 750px;
+}

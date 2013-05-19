@@ -50,7 +50,7 @@
 
 <span id="map-result">Found <%= @stylists.count %> stylists in <%= current_user.location %></span>
 
-<div id="map-result-list">
+<div id="map-result-list" class="clearfix">
   <script>var i = 0;</script>
   <% @stylists.each do |stylist| %>
   <div class='stylist-wrapper'>
@@ -58,9 +58,19 @@
       <img src=<%= stylist.user.pic %> />
     </div>
     <div class='stylist-result'>
-      <h3><%= stylist.user.name %></h3>
-      <p><%= stylist.user.location %> </br>
-      insert rating picture here</p>
+      <div class='stylist-info'>
+        <h3><%= stylist.user.name %></h3>
+        <p><%= stylist.user.location %></p>
+
+        <div id='stylist-stars'>
+          <% (1..stylist.rating.to_i).each do |i| %>
+            <i class="icon-star"></i>
+          <% end %>
+        </div>
+      </div>
+      <div class='stylist-controls'>
+        <td><%= link_to 'Book It', {:controller=>"appointments", :action=>"new", :stylist => stylist.id}, :class=>'actions' %>
+      </div>
     </div>
   </div>
 

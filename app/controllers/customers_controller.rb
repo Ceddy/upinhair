@@ -5,7 +5,7 @@ class CustomersController < ApplicationController
     @customers = Customer.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html {render layout: 'dashboard'}
       format.json { render json: @customers }
     end
   end
@@ -16,7 +16,7 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html {render layout: 'dashboard'}
       format.json { render json: @customer }
     end
   end

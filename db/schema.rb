@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(:version => 20130519014624) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "customers", :force => true do |t|
+    t.string   "facial_shape"
+    t.string   "body_shape"
+    t.string   "hair_length"
+    t.string   "hair_color"
+    t.string   "hair_texture"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "look_images", :force => true do |t|
     t.string   "pic_file_name"
     t.string   "pic_content_type"
@@ -36,16 +47,6 @@ ActiveRecord::Schema.define(:version => 20130519014624) do
     t.integer  "after_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-
-  create_table "customers", :force => true do |t|
-    t.string   "facial_shape"
-    t.string   "body_shape"
-    t.string   "hair_length"
-    t.string   "hair_color"
-    t.string   "hair_texture"
-    t.integer  "user_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
   end
 
   create_table "stylists", :force => true do |t|

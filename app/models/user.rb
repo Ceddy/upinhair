@@ -9,15 +9,13 @@ class User < ActiveRecord::Base
   has_attached_file :pic
   # Setup accessible (or protected) attributes for your model
   attr_accessible :user_type, :name, :email, :password, :password_confirmation, :remember_me, :location, :sex, :pic
-  # attr_accessible :title, :body
-  belongs_to :rolable, :polymorphic => true
 
   def create_profile
   	if stylist?
-  		Stylist.create(:salon => "CandyShops")
+  		Stylist.create(:salon => "CandyShops", :user_id => id)
   	end
   	if customer?
-  		Customer.create(:face_type => "ChubbyDubby")
+  		Customer.create(:facial_shape => "ChubbyDubby", :user_id => id)
   	end
   end
 

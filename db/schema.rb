@@ -26,12 +26,14 @@ ActiveRecord::Schema.define(:version => 20130519014624) do
     t.string   "hair_length"
     t.string   "hair_color"
     t.string   "hair_texture"
+    t.integer  "user_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
 
   create_table "stylists", :force => true do |t|
     t.string   "salon"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

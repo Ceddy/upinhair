@@ -1,0 +1,18 @@
+<div class="appointment-widget">
+  <div class="appointment-header">
+  		<h1>Appointment</h1>
+  </div>
+  <div class="appointment-form-container">
+    <div class="row-fluid appointment-page-stylist">
+    	<% @stylist = Stylist.find(appointment.stylist_id) %>
+      <% @stylistUser = User.find(@stylist.user_id) %>
+    	<div class="span2">
+        <%= image_tag @stylistUser.pic.url %>
+    	</div>
+    	<div class="span5">
+        <h2><%= @stylistUser.name %></h2>
+        <%= appointment.date.strftime("%Y-%m-%d %H:%M") %>
+    	</div>
+  	</div>
+  </div>
+</div>

@@ -44,9 +44,17 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = Appointment.new
 
+    somedate = DateTime.new(params[:appointment]["date(1i)"].to_i, 
+                        params[:appointment]["date(2i)"].to_i,
+                        params[:appointment]["date(3i)"].to_i,
+                        params[:appointment]["date(4i)"].to_i,
+                        params[:appointment]["date(5i)"].to_i)
+    @appointment.date = somedate
     stylist = params[:appointment][:stylist]
     @appointment.stylist_id = stylist
     @appointment.customer_id = Customer.find_by_user_id(current_user.id).id
+
+    @appointment.status = "Pending"
 
     respond_to do |format|
       if @appointment.save

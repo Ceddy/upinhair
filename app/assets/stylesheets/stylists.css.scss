@@ -1,3 +1,20 @@
 // Place all the styles related to the Stylists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#portfolio-look {
+  float: left;
+  width: 125px;
+}
+
+#stylist-portfolio-looks {
+  width: 750px;
+
+  img {
+    padding: 10px;
+  }
+}
+
+#stylist-action {
+  width: 750px;
+}

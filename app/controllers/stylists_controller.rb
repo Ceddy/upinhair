@@ -17,6 +17,9 @@ class StylistsController < ApplicationController
   def show
     @stylist = Stylist.find(params[:id])
 
+    # Grab styles and stuff
+    @looks = LookImage.all
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @stylist }

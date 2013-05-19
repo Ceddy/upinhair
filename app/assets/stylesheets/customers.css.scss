@@ -1,3 +1,27 @@
 // Place all the styles related to the Customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.customer-edit {
+	background-color: lightgrey;
+	padding: 30px;
+	padding-top: 50px;
+}
+
+.customer-help {
+	height: 50px;
+}
+
+.form-container {
+
+	h1 {
+		font-family: 'Proxima Nova';
+		font-size: 24px;
+		color: black;
+	}
+}
+
+.field-section {
+	border-top: 1px solid black;
+	padding-top: 20px;
+}

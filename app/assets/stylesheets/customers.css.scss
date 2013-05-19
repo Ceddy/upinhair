@@ -3,17 +3,31 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .customer-edit {
-	background-color: lightgrey;
 	padding: 30px;
-	padding-top: 50px;
+	padding-top: 45px;
+	width: 400px;
+
+	.actions input {
+		background: #4CACCE;
+		border: none;
+		border-radius: 4px;
+		color: white;
+		float: right;
+		padding: 10px 30px;
+
+	  &:hover {
+	    background: #495D6E;
+	    text-decoration: underline;
+	  }
+	}
 }
 
 .customer-help {
-	height: 50px;
+	background: #eee;
+	padding: 30px;
 }
 
 .form-container {
-
 	h1 {
 		font-family: 'Proxima Nova';
 		font-size: 24px;
@@ -22,6 +36,20 @@
 }
 
 .field-section {
-	border-top: 1px solid black;
+	border-top: 1px solid #eee;
 	padding-top: 20px;
+
+	.field {
+		padding: 10px 0;
+		width: 400px;
+	}
+
+	input,
+	select {
+		float: right;
+	}
+}
+
+.form-section {
+	margin-bottom: 60px;
 }

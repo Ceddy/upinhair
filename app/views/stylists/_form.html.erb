@@ -1,3 +1,4 @@
+<div class="customer-edit">
 <%= form_for(@stylist) do |f| %>
   <% if @stylist.errors.any? %>
     <div id="error_explanation">
@@ -11,11 +12,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :salon %><br />
-    <%= f.text_field :salon %>
+  <div class="form-section">
+    <h1>Salon</h1>
+    <div class="field-section">
+      <div class="field form-inline">
+        <%= f.label :salon %>
+        <%= f.text_field :salon %>
+      </div>
+    </div>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>

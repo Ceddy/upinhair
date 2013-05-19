@@ -66,6 +66,7 @@ Upinhair::Application.routes.draw do
   end
   root :to => "home#index"
 
+  match '/accept_appointment/:id', :to => 'appointments#accept_appointment'
   match '/dashboard', :to => 'home#dashboard'
 
   match '/search' => 'home#search'

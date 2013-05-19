@@ -1,28 +1,55 @@
-<p>
-  <b>Facial shape:</b>
-  <%= @customer.facial_shape %>
-</p>
+<h1 class='header-title'>Customer Profile</h1>
 
-<p>
-  <b>Body shape:</b>
-  <%= @customer.body_shape %>
-</p>
+<div class="customer-help">
+  Your profile is used to determine which hairstyles suit you best. It also contains important information for stylists during the appointment process.
+</div>
 
-<p>
-  <b>Hair length:</b>
-  <%= @customer.hair_length %>
-</p>
+<div class="customer-edit">
+  <div class="form-section">
+    <h1>Body</h1>
+    <div class="field-section">
+      <div class="field form-inline">
+        <p>
+          <b>Facial shape:</b>
+          <%= @customer.facial_shape %>
+        </p>
+      </div>
+      <div class="field form-inline">
+        <p>
+          <b>Body shape:</b>
+          <%= @customer.body_shape %>
+        </p>      
+      </div>
+    </div>
+  </div>
 
-<p>
-  <b>Hair color:</b>
-  <%= @customer.hair_color %>
-</p>
+  <div class="form-section">
+    <h1>Hair</h1>
+    <div class="field-section">
+      <div class="field form-inline">
+        <p>
+          <b>Hair length:</b>
+          <%= @customer.hair_length %>
+        </p>
+      </div>
 
-<p>
-  <b>Hair texture:</b>
-  <%= @customer.hair_texture %>
-</p>
+      <div class="field form-inline">
+        <p>
+          <b>Hair color:</b>
+          <%= @customer.hair_color %>
+        </p>
+      </div>
 
+      <div class="field form-inline">
+        <p>
+          <b>Hair texture:</b>
+          <%= @customer.hair_texture %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<div class="action-container">
+  <%= link_to 'Edit', edit_customer_path(@customer), :class => "actions" %>  
+</div>

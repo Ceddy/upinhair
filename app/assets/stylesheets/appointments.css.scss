@@ -2,10 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.appointment-widget {
+	margin: 30px;
+	border: 1px solid seagreen;
+}
+
 .appointment-header {
 	background: seagreen;
+	position: relative;
 	color: white;
 	padding: 10px;
+	h1 {
+		font-family: "proxima-nova";
+	}
+	h2 {
+		position: absolute;
+		color: white;
+		right: 20px;
+		top: 0;
+	}
+}
+
+.appointment-button {
+	float:right;
+	.button {
+		height: 50px;
+	}
 }
 
 .appointment-form-container {
@@ -17,7 +39,18 @@
 }
 
 .appointment-page-stylist {
+	height: 150px;
 	#avatar {
-		width: 50px;
+		width: 100px;
+		margin-bottom: 20px;
+	}
+	h2 {
+		font-size: 30px;
+	}
+	h3 {
+		font-size: 20px;
+		color: gray;
+		line-height: 1;
 	}
 }
+

@@ -11,23 +11,15 @@ class User < ActiveRecord::Base
   attr_accessible :user_type, :name, :email, :password, :password_confirmation, :remember_me, :location, :sex, :pic
 
   def create_profile
-  	if stylist?
-  		Stylist.create(:salon => "CandyShops", :user_id => id)
-  	end
-  	if customer?
-  		Customer.create(:facial_shape => "ChubbyDubby", :user_id => id)
-  	end
+  	Stylist.create(:user_id => id) if stylist?
+  	Customer.create(:user_id => id) if customer?
   end
 
   def stylist?
-    if user_type == 'Stylist' || user_type == 'stylist'
-      true
-    end
+    user_type == 'Stylist' || user_type == 'stylist'
   end
 
   def customer?
-    if user_type == 'Customer' || user_type == 'customer'
-      true
-    end
+    user_type == 'Customer' || user_type == 'customer'
   end
 end

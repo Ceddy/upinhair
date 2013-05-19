@@ -1,8 +1,17 @@
 <div class="appointment-page">
 	<div class="appointment-header">
-		<h1>Appointment</h1>
+		<h1>Request Appointment</h1>
 	</div>
 	<div class="appointment-form-container">
+	  <div class="row-fluid appointment-page-stylist">
+ 	  	<% @stylistUser = @stylist.user %>
+    	<div class="span2">
+      	<%= image_tag @stylistUser.pic.url, :id=>"avatar" %>
+    	</div>
+    	<div class="span5">
+      	<h2><%= @stylistUser.name %></h2>
+    	</div>
+  	</div>
 		<%= render 'form' %>
 	</div>
 

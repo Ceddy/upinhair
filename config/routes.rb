@@ -56,6 +56,7 @@ Upinhair::Application.routes.draw do
   devise_for :users do
     get 'logout' => 'devise/sessions#destroy'
   end
+
   authenticated :user do
     root :to => 'home#index'
   end

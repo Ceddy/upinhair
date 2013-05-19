@@ -11,13 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130519014624) do
+ActiveRecord::Schema.define(:version => 20130519032536) do
 
   create_table "appointments", :force => true do |t|
     t.datetime "date"
     t.string   "location"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "customers", :force => true do |t|
+    t.string   "facial_shape"
+    t.string   "body_shape"
+    t.string   "hair_length"
+    t.string   "hair_color"
+    t.string   "hair_texture"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "look_images", :force => true do |t|
@@ -36,16 +47,16 @@ ActiveRecord::Schema.define(:version => 20130519014624) do
     t.integer  "after_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
 
-  create_table "customers", :force => true do |t|
-    t.string   "facial_shape"
-    t.string   "body_shape"
-    t.string   "hair_length"
-    t.string   "hair_color"
-    t.string   "hair_texture"
-    t.integer  "user_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+  create_table "messages", :force => true do |t|
+    t.text     "content"
+    t.integer  "appointment_id"
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.integer  "image_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "stylists", :force => true do |t|

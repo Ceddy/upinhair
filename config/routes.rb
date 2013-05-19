@@ -1,6 +1,9 @@
 Upinhair::Application.routes.draw do
 
 
+  resources :messages
+
+
   resources :look_images
 
 

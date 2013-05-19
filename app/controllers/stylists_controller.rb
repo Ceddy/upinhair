@@ -87,17 +87,11 @@ class StylistsController < ApplicationController
     # find all stylists whose user have the same location
     @search = current_user.location
 
-    puts "AHAHAHA"
-    puts current_user
-    puts current_user.location
-    puts @search
-
     # @stylists = Stylist.search(params[:search])
-    local_users = User.where('location = ?', @search).map {|user| user.id}
-    puts local_users
+    # local_users = User.where('location = ?', @search).map {|user| user.id}
 
-    @stylists = Stylist.where('user_id IN ?', local_users)
-    puts @stylists
+    # @stylists = Stylist.where('user_id IN (?)', local_users)
+    @stylists = Stylist.all;
   end
 
 end

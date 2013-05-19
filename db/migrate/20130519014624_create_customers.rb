@@ -6,6 +6,7 @@ class CreateCustomers < ActiveRecord::Migration
       t.string :hair_length
       t.string :hair_color
       t.string :hair_texture
+      t.integer :user_id
 
       t.timestamps
     end

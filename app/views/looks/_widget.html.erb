@@ -1,0 +1,10 @@
+<div class="row-fluid look-widget">
+  <div class="span6">
+    <%= image_tag LookImage.find_by_id(look.before_id).pic.url, :class=>"look-image" %>
+      BEFORE
+  </div>
+  <div class="span6">
+    <%= image_tag LookImage.find_by_id(look.after_id).pic.url, :class=>"look-image" %>
+      AFTER
+  </div>
+</div>

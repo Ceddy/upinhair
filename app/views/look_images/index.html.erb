@@ -1,0 +1,11 @@
+<h1>Listing look_images</h1>
+
+<% @look_images.each do |look_image| %>
+  <div>
+    <%= image_tag look_image.pic.url,  :class=> "look-image"  %>
+  </div>
+<% end %>
+
+<br />
+
+<%= link_to 'New Look image', new_look_image_path %>

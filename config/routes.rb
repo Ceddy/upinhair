@@ -1,6 +1,12 @@
 Upinhair::Application.routes.draw do
 
 
+  resources :look_images
+
+
+  resources :looks
+
+
   devise_for :users
 
   #devise_for :users

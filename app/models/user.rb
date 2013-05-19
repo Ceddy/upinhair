@@ -7,8 +7,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_attached_file :pic
+  has_many :look_images
   # Setup accessible (or protected) attributes for your model
   attr_accessible :user_type, :name, :email, :password, :password_confirmation, :remember_me, :location, :sex, :pic
+  attr_accessible :look_images
 
   def create_profile
   	Stylist.create(:user_id => id) if stylist?

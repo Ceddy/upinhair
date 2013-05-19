@@ -1,6 +1,12 @@
 Upinhair::Application.routes.draw do
 
 
+  resources :customers
+
+
+  resources :stylists
+
+
   resources :appointments
 
 

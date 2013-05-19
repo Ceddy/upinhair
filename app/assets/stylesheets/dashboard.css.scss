@@ -15,14 +15,20 @@ ul {
     text-align: center;
 
     #profile-picture {
-      background: url('nad.png') center no-repeat;
+      /*background: url('nad.png') center no-repeat;*/
       height: 300px;
       width: 300px;
 
       span {
         font-size: 40px;
         position: relative;
-        top: 150px;
+        top: 120px;
+      }
+
+      #profile-avatar {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
       }
     }
   }

@@ -3,13 +3,18 @@
   <!-- profile -->
   <div id='profile-info'>
     <div id='profile-picture'>
-      <span>NadaY</span>
+      <span>
+        <%= current_user.name %>
+      </span>
+      <%= image_tag current_user.pic.url, :id=>"profile-avatar" %>
     </div>
   </div>
 
   <div id='profile-location'>
     <i class='icon-map-marker'>
-      <span id='profile-city'>Waterloo</span>
+      <span id='profile-city'>
+        <%= current_user.location %>
+      </span>
     </i>
   </div>
 

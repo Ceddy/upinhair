@@ -1,6 +1,32 @@
-<p>
-  <b>Salon:</b>
-  <%= @stylist.salon %>
-</p>
+<h1 class='header-title'>Stylist Profile</h1>
 
-<%= link_to 'Edit', edit_stylist_path(@stylist) %>
+<div class="customer-help">
+  Customers can browse your profile to see past appointments you have had along with the before and after pictures of each appointment.
+</div>
+
+<div class="customer-edit">
+  <div class="form-section">
+    <h1>Salon</h1>
+    <div class="field-section">
+      <div class="field form-inline">
+        <p>
+          <b>Salon:</b>
+          <%= @stylist.salon %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h1>Portfolio</h1>
+    <div class="field-section clearfix" id="stylist-portfolio-looks">
+      <% @looks.each do |look| %>
+        <%= image_tag look.pic.url, :id=>"portfolio-look" %>
+      <% end %> 
+    </div>    
+  </div>
+</div>
+
+<div class="action-container" id="stylist-action">
+  <%= link_to 'Edit', edit_stylist_path(@stylist), :class => "actions" %>  
+</div>

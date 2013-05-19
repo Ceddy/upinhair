@@ -14,7 +14,7 @@ class HomeController < ApplicationController
       path = customers_path
     end
 
-    puts path
+    redirect_to path
   end
 
   def dashboard

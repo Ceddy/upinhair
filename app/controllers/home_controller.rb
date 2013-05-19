@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 
   def index
     # Redirect logic here!
-    puts current_user
+    current_user
 
     case current_user.user_type
     when 'Stylist'

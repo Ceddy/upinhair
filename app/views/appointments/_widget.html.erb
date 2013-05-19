@@ -27,6 +27,9 @@
           <%= link_to "Accept Appointment", {:controller=>"appointments", :action=>"accept_appointment", :id=>appointment.id}, :class=>"button" %>
         </div>
       <% end %>
+      <div class='appointment-button'>
+        <%= link_to "Consultation", appointment_messages_path(appointment.id), :class=>"button" %>
+      </div>
   	</div>
   </div>
 </div>

@@ -1,8 +1,10 @@
 class MessagesController < ApplicationController
+  layout 'dashboard'
   # GET /messages
   # GET /messages.json
   def index
     @messages = Message.all
+    @appointment = Appointment.find(params[:appointment_id])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,6 +27,7 @@ class MessagesController < ApplicationController
   # GET /messages/new.json
   def new
     @message = Message.new
+    @appointment = Appointment.find(params[:appointment_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,15 +43,18 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
-    @message = Message.new(params[:message])
+    @appointment = Appointment.find(params[:appointment_id])
+    @message = @appointment.messages.new
+    @message.content = params[:message][:content]
+    @message.sender_id = params[:message][:sender]
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
-        format.json { render json: @message, status: :created, location: @message }
+        format.html { redirect_to appointment_messages_path(@appointment.id), notice: 'Message was successfully created.' }
+        format.json { render json: appointment_messages_path(@appointment.id), status: :created, location: appointment_messages_path(@appointment.id) }
       else
         format.html { render action: "new" }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
+        format.json { render json: @appointment.errors, status: :unprocessable_entity }
       end
     end
   end

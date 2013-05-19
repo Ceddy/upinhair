@@ -2,7 +2,9 @@ Upinhair::Application.routes.draw do
 
   devise_for :users
 
-  resources :appointments
+  resources :appointments do
+    resources :messages
+  end
   resources :customers
   resources :looks
   resources :look_images

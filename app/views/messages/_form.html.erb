@@ -1,4 +1,4 @@
-<%= form_for(@message) do |f| %>
+<%= form_for(:message, :url => appointment_messages_path(:appointment_id => @appointment.id)) do |f| %>
   <% if @message.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
@@ -13,16 +13,9 @@
 
   <div class="field">
     <%= f.label "Content" %><br />
-    <%= f.text_area :content %>
+    <%= f.text_area :content, :rows=>4 %>
   </div>
-  <div class="field">
-    <%= f.label "Sender" %><br />
-    <%= f.text_field :sender %>
-  </div>
-  <div class="field">
-    <%= f.label "Receiver" %><br />
-    <%= f.text_field :receiver %>
-  </div>
+  <%= f.hidden_field :sender, :value => current_user.id %>
   <div class="actions">
     <%= f.submit %>
   </div>

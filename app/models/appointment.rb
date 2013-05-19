@@ -3,4 +3,6 @@ class Appointment < ActiveRecord::Base
 
   has_one :customer
   has_one :stylist
+  has_many :messages
+  accepts_nested_attributes_for :messages
 end

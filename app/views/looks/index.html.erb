@@ -1,0 +1,7 @@
+<% @looks.each do |look| %>
+  <%= render :partial => 'widget', :locals => { :look => look } %>
+<% end %>
+
+<br />
+
+<%= link_to 'New Look', new_look_path %>

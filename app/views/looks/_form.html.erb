@@ -1,0 +1,29 @@
+<%= form_for(@look) do |f| %>
+  <% if @look.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@look.errors.count, "error") %> prohibited this look from being saved:</h2>
+
+      <ul>
+      <% @look.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label "Before Pic" %>
+    <%= f.file_field :before_pic %>
+  </div>
+  <div class="field">
+    <%= f.label "After Pic" %>
+    <%= f.file_field :after_pic %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

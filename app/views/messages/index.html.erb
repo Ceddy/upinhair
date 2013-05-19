@@ -1,9 +1,13 @@
-<h1>Consultation</h1>
+<h1 class='header-title'>Consultation</h1>
+
+<div class="customer-help">
+  The consultation lets customers interact with their stylists before their appointment. Customers can post styles and receive feedback and suggestions from their stylist regarding styles that fit them.
+</div>
 
 <% @messages.each do |message| %>
   <%= render :partial => 'widget', :locals => { :message => message } %>
 <% end %>
 
-<br />
-
-<%= link_to 'New Message', new_appointment_message_path(@appointment.id) %>
+<div id="consultation-container">
+  <%= link_to 'New Message', new_appointment_message_path(@appointment.id), :class => "actions" %>
+</div>

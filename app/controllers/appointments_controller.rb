@@ -3,8 +3,13 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    @customer = Customer.find_by_user_id(current_user.id)
-    @appointments = Appointment.where("customer_id = ?", @customer.id)
+    if current_user.user_type == "Customer"
+      @customer = Customer.find_by_user_id(current_user.id)
+      @appointments = Appointment.where("customer_id = ?", @customer.id)
+    else
+      @stylist = Stylist.find_by_user_id(current_user.id)
+      @appointments = Appointment.where("stylist_id = ?", @stylist.id)
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -95,4 +100,15 @@ class AppointmentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def accept_appointment
+    @appointment = Appointment.find(params[:id])
+    @appointment.status = "Confirmed"
+    @appointment.save
+
+    respond_to do |format|
+      format.html { redirect_to appointments_url }
+    end
+  end
+
 end

@@ -5,15 +5,25 @@
   </div>
   <div class="appointment-form-container">
     <div class="row-fluid appointment-page-stylist">
-    	<% @stylist = Stylist.find(appointment.stylist_id) %>
-      <% @stylistUser = User.find(@stylist.user_id) %>
+    	
+      <% if current_user.user_type == "Customer" %>
+        <% @relevant = Stylist.find(appointment.stylist_id) %>
+      <% else %>
+        <% @relevant = Customer.find(appointment.customer_id) %>
+      <% end %>  
+      <% @relevantUser = User.find(@relevant.user_id) %>
     	<div class="span2">
-        <%= image_tag @stylistUser.pic.url %>
+        <%= image_tag @relevantUser.pic.url %>
     	</div>
     	<div class="span5">
-        <h2><%= @stylistUser.name %></h2>
+        <h2><%= @relevantUser.name %></h2>
         <%= appointment.date.strftime("%Y-%m-%d %H:%M") %>
     	</div>
+      <% if current_user.user_type == "Stylist" and appointment.status != "Confirmed" %>
+        <div class='appointment-button'>
+          <%= link_to "Accept Appointment", {:controller=>"appointments", :action=>"accept_appointment", :id=>appointment.id}, :class=>"button" %>
+        </div>
+      <% end %>
   	</div>
   </div>
 </div>

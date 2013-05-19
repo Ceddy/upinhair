@@ -1,3 +1,4 @@
+<div class="customer-edit">
 <%= form_for(@customer) do |f| %>
   <% if @customer.errors.any? %>
     <div id="error_explanation">
@@ -12,29 +13,41 @@
   <% end %>
 
   <div class="form-section">
+    <h1>Body</h1>
+    <div class="field-section">
+      <div class="field form-inline">
+        <%= f.label :facial_shape %><br />
+        <%= f.select :facial_shape, "<option value='round'>Round</option><option value='square'>Square</option><option value='oval'>Oval</option><option value='heart'>Heart</option>".html_safe %>
+      </div>
+      <div class="field form-inline">
+        <%= f.label :body_shape %><br />
+        <%= f.select :body_shape, "<option value='athletic'>Tall/Athletic</option><option value='curvy'>Curvy</option><option value='slim'>Slim</option><option value='petite'>Petite</option>".html_safe %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :facial_shape %><br />
-    <%= f.text_field :facial_shape %>
-  </div>
-  <div class="field">
-    <%= f.label :body_shape %><br />
-    <%= f.text_field :body_shape %>
-  </div>
-  <div class="field">
-    <%= f.label :hair_length %><br />
-    <%= f.text_field :hair_length %>
-  </div>
-  <div class="field">
-    <%= f.label :hair_color %><br />
-    <%= f.text_field :hair_color %>
-  </div>
-  <div class="field">
-    <%= f.label :hair_texture %><br />
-    <%= f.text_field :hair_texture %>
+  <div class="form-section">
+    <h1>Hair</h1>
+    <div class="field-section">    
+      <div class="field">
+        <%= f.label :hair_length %><br />
+        <%= f.select :hair_length, "<option value='short'>Short</option><option value='medium'>Medium</option><option value='long'>Long</option>".html_safe %>
+
+      </div>
+      <div class="field">
+        <%= f.label :hair_color %><br />
+        <%= f.select :hair_color, "<option value='blonde'>Blonde</option><option value='brunette'>Brunette</option><option value='black'>Black</option><option value='red'>Red</option><option value='other'>Other</option>".html_safe %>
+
+      </div>
+      <div class="field">
+        <%= f.label :hair_texture %><br />
+        <%= f.select :hair_texture, "<option value='straight'>Straight</option><option value='wavy'>Wavy</option><option value='curly'>Curly</option><option value='afro'>Afro</option>".html_safe %>
+
+      </div>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>

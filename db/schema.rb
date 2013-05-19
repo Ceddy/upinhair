@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(:version => 20130519065718) do
     t.datetime "pic_updated_at"
     t.integer  "rolable_id"
     t.string   "user_type"
+    t.string   "city"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

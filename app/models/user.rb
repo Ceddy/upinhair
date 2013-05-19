@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 
   def create_profile
   	if stylist?
-  		Stylist.create(:salon_name => "CandyShops")
+  		Stylist.create(:salon => "CandyShops")
   	end
   	if customer?
   		Customer.create(:face_type => "ChubbyDubby")

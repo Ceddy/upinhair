@@ -2,12 +2,19 @@ class HomeController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-  	@users = User.all
-
     # Redirect logic here!
-    respond_to do |format|
-      format.html # index.html.erb
+    puts current_user
+
+    case current_user.user_type
+    when 'Stylist'
+      # After signing in, redirect regular users to the regular dashboard
+      path = stylists_path
+    when 'Customer'
+      # After signing in, redirect administrator users to the admin dashboard
+      path = customers_path
     end
+
+    puts path
   end
 
   def dashboard

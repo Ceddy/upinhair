@@ -1,24 +1,12 @@
 Upinhair::Application.routes.draw do
 
-
-  resources :messages
-
-
-  resources :look_images
-
-
-  resources :looks
-
-
   devise_for :users
 
-  resources :customers
-
-
-  resources :stylists
-
   resources :appointments
-
+  resources :customers
+  resources :looks
+  resources :look_images
+  resources :stylists
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -77,8 +65,6 @@ Upinhair::Application.routes.draw do
     root :to => 'home#index'
   end
   root :to => "home#index"
-
-
 
   match '/dashboard', :to => 'home#dashboard'
 

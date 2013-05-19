@@ -11,13 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130519032536) do
 
+ActiveRecord::Schema.define(:version => 20130519033953) do
   create_table "appointments", :force => true do |t|
     t.datetime "date"
     t.string   "location"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "customer_id"
+    t.integer  "stylist_id"
+    t.string   "status"
   end
 
   create_table "customers", :force => true do |t|
@@ -30,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20130519032536) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
 
   create_table "look_images", :force => true do |t|
     t.string   "pic_file_name"
@@ -47,7 +51,6 @@ ActiveRecord::Schema.define(:version => 20130519032536) do
     t.integer  "after_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
 
   create_table "messages", :force => true do |t|
     t.text     "content"
@@ -57,7 +60,6 @@ ActiveRecord::Schema.define(:version => 20130519032536) do
     t.integer  "image_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-  end
 
   create_table "stylists", :force => true do |t|
     t.string   "salon"

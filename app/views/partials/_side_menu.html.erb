@@ -3,35 +3,51 @@
   <!-- profile -->
   <div id='profile-info'>
     <div id='profile-picture'>
-      <span>NadaY</span>
+      <span>
+        <%= current_user.name %>
+      </span>
+      <%= image_tag current_user.pic.url, :id=>"profile-avatar" %>
     </div>
   </div>
 
   <div id='profile-location'>
     <i class='icon-map-marker'>
-      <span id='profile-city'>Waterloo</span>
+      <span id='profile-city'>
+        <%= current_user.location %>
+      </span>
     </i>
   </div>
 
   <ul>
     <li>
       <i class='icon-user'>
-        <span>Profile</span>
+        <% case current_user.user_type %>
+        <% when 'Stylist' %>
+          <% stylist = Stylist.where('user_id = ?', current_user.id).first %>
+          <span><%= link_to "Profile", stylist_path(stylist.id) %></span>
+        <% when 'Customer' %>
+          <% customer = Customer.where('user_id = ?', current_user.id).first %>
+          <span><%= link_to "Profile", customer_path(customer.id) %></span>
+        <% end %>
       </i>
     </li>
+    
+    <% if current_user.user_type == 'Customer' %>
     <li>
       <i class='icon-search'>
-        <span>Stylists</span>
+        <span><%= link_to "Stylists", stylists_path %></span>
       </i>
     </li>
+    <% end %>
+    
     <li>
       <i class='icon-calendar'>
-        <span>Appointments</span>
+        <span><%= link_to "Appointments", new_appointment_path %></span>
       </i>
     </li>
     <li>
       <i class='icon-heart'>
-        <span><%= link_to "Lookbook", looks_path %></span>
+        <span>Lookbook</span>
       </i>
     </li>
   </ul>

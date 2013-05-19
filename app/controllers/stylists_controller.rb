@@ -1,4 +1,6 @@
 class StylistsController < ApplicationController
+
+  layout 'dashboard'
   # GET /stylists
   # GET /stylists.json
   def index

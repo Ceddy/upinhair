@@ -1,11 +1,13 @@
 class CustomersController < ApplicationController
+  
+  layout 'dashboard'
   # GET /customers
   # GET /customers.json
   def index
     @customers = Customer.all
 
     respond_to do |format|
-      format.html {render layout: 'dashboard'}
+      format.html
       format.json { render json: @customers }
     end
   end
@@ -16,7 +18,7 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
 
     respond_to do |format|
-      format.html {render layout: 'dashboard'}
+      format.html
       format.json { render json: @customer }
     end
   end

@@ -1,8 +1,7 @@
-<h1>Listing stylists</h1>
+<h1>Stylists Near You</h1>
 
 <table>
   <tr>
-    <th>Salon</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,12 +11,10 @@
   <tr>
     <td><%= stylist.salon %></td>
     <td><%= link_to 'Show', stylist %></td>
-    <td><%= link_to 'Edit', edit_stylist_path(stylist) %></td>
-    <td><%= link_to 'Destroy', stylist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Book It', {:controller=>"appointments", :action=>"new", :stylist => stylist.id} %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Stylist', new_stylist_path %>

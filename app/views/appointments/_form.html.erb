@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+  <div class="appointment-page-stylist">
+    <% @stylistUser = @stylist.user %>
+    <%= image_tag @stylistUser.pic.url, :id=>"avatar" %>
+    
+  </div>
+
   <div class="field">
     <%= f.label :date %><br />
     <%= f.datetime_select :date %>

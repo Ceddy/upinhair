@@ -4,12 +4,22 @@
 
 .customer-edit {
 	padding: 30px;
-	padding-top: 0;
+	padding-top: 45px;
+	width: 400px;
+
+	.actions input {
+		background: #4CACCE;
+		border: none;
+		border-radius: 4px;
+		color: white;
+		float: right;
+		padding: 10px 30px;
+	}
 }
 
 .customer-help {
-	height: 50px;
-	margin: 30px;
+	background: #eee;
+	padding: 30px;
 }
 
 .form-container {
@@ -21,6 +31,19 @@
 }
 
 .field-section {
-	border-top: 1px solid black;
+	border-top: 1px solid #eee;
 	padding-top: 20px;
+
+	.field {
+		padding: 10px 0;
+		width: 400px;
+	}
+
+	select {
+		float: right;
+	}
+}
+
+.form-section {
+	margin-bottom: 60px;
 }

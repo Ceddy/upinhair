@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  facial_shape: MyString
+  body_shape: MyString
+  hair_length: MyString
+  hair_color: MyString
+  hair_texture: MyString
+
+two:
+  facial_shape: MyString
+  body_shape: MyString
+  hair_length: MyString
+  hair_color: MyString
+  hair_texture: MyString

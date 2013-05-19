@@ -1,3 +1,3 @@
 class Stylist < ActiveRecord::Base
-  has_one :user, :as => :rolable
+  attr_accessible :salon
 end

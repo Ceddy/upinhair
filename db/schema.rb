@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130518231344) do
+ActiveRecord::Schema.define(:version => 20130519014624) do
 
   create_table "appointments", :force => true do |t|
     t.datetime "date"
@@ -36,6 +36,21 @@ ActiveRecord::Schema.define(:version => 20130518231344) do
     t.integer  "after_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+
+  create_table "customers", :force => true do |t|
+    t.string   "facial_shape"
+    t.string   "body_shape"
+    t.string   "hair_length"
+    t.string   "hair_color"
+    t.string   "hair_texture"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "stylists", :force => true do |t|
+    t.string   "salon"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -58,6 +73,8 @@ ActiveRecord::Schema.define(:version => 20130518231344) do
     t.string   "pic_content_type"
     t.integer  "pic_file_size"
     t.datetime "pic_updated_at"
+    t.integer  "rolable_id"
+    t.string   "user_type"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

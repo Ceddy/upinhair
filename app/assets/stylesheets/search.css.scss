@@ -1,0 +1,23 @@
+#search-form {
+	margin-top: 50px;
+}
+
+#search-form input[type="text"] {
+	border-radius: 0;
+	margin: 0;
+}
+
+#search-form input[type="button"] {
+	width: 80px;
+	height: 30px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #4CACCE;
+	border: none;
+	color: #fff;
+}
+
+#map-canvas {
+	
+	height: 400px;
+}

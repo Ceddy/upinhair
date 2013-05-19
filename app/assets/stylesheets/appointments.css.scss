@@ -17,7 +17,12 @@
 }
 
 .appointment-page-stylist {
+	height: 150px;
 	#avatar {
-		width: 50px;
+		width: 100px;
+		margin-bottom: 20px;
+	}
+	h2 {
+		font-size: 30px;
 	}
 }

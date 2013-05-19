@@ -42,7 +42,11 @@ class AppointmentsController < ApplicationController
   # POST /appointments
   # POST /appointments.json
   def create
-    @appointment = Appointment.new(params[:appointment])
+    @appointment = Appointment.new
+
+    stylist = params[:appointment][:stylist]
+    @appointment.stylist_id = stylist
+    @appointment.customer_id = Customer.find_by_user_id(current_user.id).id
 
     respond_to do |format|
       if @appointment.save

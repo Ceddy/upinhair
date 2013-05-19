@@ -21,13 +21,13 @@
       map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     }
     
-    function codeAddress(addressIn) {
+    function codeAddress(addressIn, i) {
       var address = addressIn;
       geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
           map.setCenter(results[0].geometry.location);
 
-          var image = "<%= asset_path('map_markers/number_1.png') %>";
+          var image = "<%= asset_path('map_markers')%>" + "/number_" + (i+1) + ".png";
           var marker = new google.maps.Marker({
               map: map,
               position: results[0].geometry.location,
@@ -44,6 +44,7 @@
     // google.maps.event.addDomListener(window, 'load', initialize);
   </script>
   
+  <script>var i = 0;</script>
   <% @stylists.each do |stylist| %>
 	<div class='stylist-wrapper'>
 		<div class='stylist-picture'>
@@ -56,6 +57,7 @@
 		</div>
 	</div>
 
-	<script>codeAddress('<%= stylist.user.location %>')</script>
+	<script>codeAddress('<%= stylist.user.location %>', i)</script>
+  <script>i += 1;</script>
 	<% end %>
 </div>

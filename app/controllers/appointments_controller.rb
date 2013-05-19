@@ -26,6 +26,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new.json
   def new
     @appointment = Appointment.new
+    @stylist = Stylist.find(params[:stylist])
 
     respond_to do |format|
       format.html # new.html.erb

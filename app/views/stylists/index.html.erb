@@ -4,12 +4,14 @@
   <tr>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @stylists.each do |stylist| %>
   <tr>
     <td><%= stylist.salon %></td>
     <td><%= link_to 'Show', stylist %></td>
+    <td><%= link_to 'Book It', {:controller=>"appointments", :action=>"new", :stylist => stylist.id} %>
   </tr>
 <% end %>
 </table>

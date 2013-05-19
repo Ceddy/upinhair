@@ -21,14 +21,25 @@
   <ul>
     <li>
       <i class='icon-user'>
-        <span><%= link_to "Profile", edit_customer_path(current_user) %></span>
+        <% case current_user.user_type %>
+        <% when 'Stylist' %>
+          <% stylist = Stylist.where('user_id = ?', current_user.id).first %>
+          <span><%= link_to "Profile", stylist_path(stylist.id) %></span>
+        <% when 'Customer' %>
+          <% customer = Customer.where('user_id = ?', current_user.id).first %>
+          <span><%= link_to "Profile", customer_path(customer.id) %></span>
+        <% end %>
       </i>
     </li>
+    
+    <% if @customer %>
     <li>
       <i class='icon-search'>
         <span><%= link_to "Stylists", stylists_path %></span>
       </i>
     </li>
+    <% end %>
+    
     <li>
       <i class='icon-calendar'>
         <span><%= link_to "Appointments", new_appointment_path %></span>

@@ -37,6 +37,10 @@ class CustomersController < ApplicationController
   # GET /customers/1/edit
   def edit
     @customer = Customer.find(params[:id])
+
+    respond_to do |format|
+      format.html {render layout: 'dashboard'}
+    end
   end
 
   # POST /customers
